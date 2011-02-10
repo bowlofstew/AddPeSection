@@ -6,7 +6,7 @@ addpesection -n [number] -name [sectionname] -size [sectionsize] -flags [RWX] -v
 
 n: Number of sections to add.
 name: Name of new section(s) (default: '.new[n]').
-size: Section(s) size (default: the smallest)
+size: Section(s) size (default: the smallest).
 flags: R (Read) W (Write) X (Execute).
 
 Example:
