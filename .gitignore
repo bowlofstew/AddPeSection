@@ -1,0 +1,6 @@
+*.exe
+*.ncb
+*.obj
+*.user
+AddPeSection/Release/*
+AddPeSection/Debug/*
