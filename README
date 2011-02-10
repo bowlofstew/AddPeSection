@@ -1,0 +1,10 @@
+Simple herramienta que añade secciones a un archivo PE.
+
+Uso:
+
+addpesection -n [número] -name [sectionname] -size [tamañosección] -flags [RWX] -v (verbose)
+
+n: Número de secciones a añadir.
+name: Nombre de las secciones (por defecto '.new[n]').
+size: Tamaño de las secciones (por defecto el más pequeño)
+flags: R (Read) W (Write) X (Execute).
