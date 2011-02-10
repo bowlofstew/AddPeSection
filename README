@@ -8,3 +8,9 @@ n: Number of sections to add.
 name: Name of new section(s) (default: '.new[n]').
 size: Section(s) size (default: the smallest)
 flags: R (Read) W (Write) X (Execute).
+
+Example:
+
+addpesection -n 1 -name '.NEW!' -size 200h -flags RWX
+
+Adds ONE section named '.NEW!', with 200h bytes in size and read, write and execute permissions.
