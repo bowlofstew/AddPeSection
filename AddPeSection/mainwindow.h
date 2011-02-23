@@ -20,6 +20,7 @@ private slots:
     void on_btnAdd_clicked();
     void on_btnFlags_clicked();
     void on_btnBuild_clicked();
+    void on_actOpen_triggered();
 };
 
 #endif // MAINWINDOW_H

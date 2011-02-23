@@ -32,3 +32,20 @@ void MainWindow::on_btnFlags_clicked()
 {
     QMessageBox::information(this,"Evento","btnFlags!");
 }
+
+void MainWindow::on_actOpen_triggered()
+{
+    QString szFileName= QFileDialog::getOpenFileName(this,"Open File","/home","Executable Files (*.exe);;All Files (*)");
+    if(szFileName!=QString::null)
+    {
+        QFile hFile(szFileName);
+        if(hFile.exists())
+        {
+            QByteArray FileBuffer=hFile.readAll();
+            char* lpFileBuffer=FileBuffer.data();
+
+            //Creo que ya está
+
+        }
+    }
+}
