@@ -1,11 +1,16 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-MainWindow::MainWindow(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::MainWindow)
+MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->lstInfo->header()->setResizeMode(0,QHeaderView::Stretch);
+    ui->lstInfo->header()->setResizeMode(1,QHeaderView::Stretch);
+    ui->lstInfo->header()->setResizeMode(2,QHeaderView::Stretch);
+    ui->lstInfo->header()->setResizeMode(3,QHeaderView::Stretch);
+    ui->lstInfo->header()->setResizeMode(4,QHeaderView::Stretch);
+    ui->lstInfo->header()->setResizeMode(5,QHeaderView::Stretch);
+
 }
 
 MainWindow::~MainWindow()
@@ -13,14 +18,17 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::changeEvent(QEvent *e)
+void MainWindow::on_btnAdd_clicked()
 {
-    QMainWindow::changeEvent(e);
-    switch (e->type()) {
-    case QEvent::LanguageChange:
-        ui->retranslateUi(this);
-        break;
-    default:
-        break;
-    }
+    QMessageBox::information(this,"Evento","btnAdd!");
+}
+
+void MainWindow::on_btnBuild_clicked()
+{
+    QMessageBox::information(this,"Evento","btnBuild!");
+}
+
+void MainWindow::on_btnFlags_clicked()
+{
+    QMessageBox::information(this,"Evento","btnFlags!");
 }

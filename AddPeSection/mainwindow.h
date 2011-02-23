@@ -1,7 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QMainWindow>
+#include <QtGui>
 
 namespace Ui {
     class MainWindow;
@@ -13,11 +13,13 @@ public:
     MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
-protected:
-    void changeEvent(QEvent *e);
-
 private:
     Ui::MainWindow *ui;
+
+private slots:
+    void on_btnAdd_clicked();
+    void on_btnFlags_clicked();
+    void on_btnBuild_clicked();
 };
 
 #endif // MAINWINDOW_H

@@ -6,21 +6,18 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>375</width>
-    <height>338</height>
+    <width>706</width>
+    <height>358</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>AddPeSection</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout_2">
     <item row="0" column="0">
      <layout class="QGridLayout" name="gridLayout">
       <item row="0" column="0">
-       <widget class="QTreeView" name="treeView"/>
-      </item>
-      <item row="1" column="0">
        <widget class="QGroupBox" name="groupBox">
         <property name="title">
          <string>Add Section: </string>
@@ -36,25 +33,63 @@
             </widget>
            </item>
            <item row="0" column="1">
-            <widget class="QLineEdit" name="lineEdit"/>
+            <widget class="QLineEdit" name="lineEdit">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
            </item>
-           <item row="0" column="3">
+           <item row="0" column="4">
+            <widget class="QPushButton" name="btnAdd">
+             <property name="text">
+              <string>Add</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="4">
+            <widget class="QPushButton" name="btnFlags">
+             <property name="text">
+              <string>Flags</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QSpinBox" name="spinBox"/>
+           </item>
+           <item row="1" column="0">
             <widget class="QLabel" name="label_2">
              <property name="text">
               <string>Size:</string>
              </property>
             </widget>
            </item>
-           <item row="0" column="4">
-            <widget class="QSpinBox" name="spinBox"/>
-           </item>
-           <item row="0" column="2">
+           <item row="0" column="5" colspan="2">
             <spacer name="horizontalSpacer">
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
              </property>
-             <property name="sizeType">
-              <enum>QSizePolicy::Fixed</enum>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="6">
+            <widget class="QPushButton" name="btnBuild">
+             <property name="text">
+              <string>Build</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="5">
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
              </property>
              <property name="sizeHint" stdset="0">
               <size>
@@ -66,18 +101,38 @@
            </item>
           </layout>
          </item>
-         <item row="2" column="0">
-          <widget class="QPushButton" name="pushButton">
-           <property name="text">
-            <string>Flags</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="1">
-          <widget class="QPushButton" name="pushButton_2">
-           <property name="text">
-            <string>Add</string>
-           </property>
+         <item row="0" column="0" colspan="2">
+          <widget class="QTreeWidget" name="lstInfo">
+           <column>
+            <property name="text">
+             <string>Name</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>RawOffset</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>RawSize</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>VirtualOffset</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>VirtualSize</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Flags</string>
+            </property>
+           </column>
           </widget>
          </item>
         </layout>
@@ -92,7 +147,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>375</width>
+     <width>706</width>
      <height>23</height>
     </rect>
    </property>
